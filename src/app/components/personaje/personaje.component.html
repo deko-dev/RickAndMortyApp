@@ -1,1 +1,31 @@
-<p>personaje works!</p>
+<div class="container container-personaje">
+    <div class="card-personaje">
+        <div class="img-personaje">
+            <img [src]="personaje.image" alt="">
+        </div>
+        <div class="info-personaje">
+            <h2 class="nombre-personaje">{{ personaje.name }}</h2>
+            <div class="datos-personaje">
+                <div class="status">
+                    <div *ngIf="personaje.status === 'Dead' " class="circle bg-red"></div>
+                    <div *ngIf="personaje.status === 'Alive' " class="circle bg-green"></div>
+                    <div *ngIf="personaje.status === 'unknown' " class="circle bg-gray"></div>
+
+                    <p class="texto-status"> {{ personaje.status }} - {{ personaje.species }}</p>
+                </div>
+                <div class="location">
+                    <p class="text-muted">Ultima locación conocida</p>
+                    <p> {{ personaje.location['name'] }} </p>
+                </div>
+                <div class="lanzamiento">
+                    <p class="text-muted">Primer Episodio</p>
+                    <p> {{ personaje.location['name'] }} </p>
+                </div>
+                <div class="total-ep">
+                    <p class="text-muted">Episodios en Total</p>
+                    <!-- <p> {{ personaje.location['name'] }} </p> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

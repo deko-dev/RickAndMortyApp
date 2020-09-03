@@ -1,11 +1,11 @@
 <div class="tarjeta" *ngFor="let personaje of personajes">
     <div class="img-tarjeta">
-        <a [routerLink]="['personaje', personaje.id]">
+        <a [routerLink]="['/personaje', personaje.id]">
             <img [src]="personaje.image" class="img-fluid" [alt]="personaje.name">
         </a>
     </div>
     <div class="info-tarjeta">
-        <a [routerLink]="['personaje', personaje.id]" class="card-title mb-2 font-weight-bold"> {{ personaje.name }}</a>
+        <a [routerLink]="['/personaje', personaje.id]" class="card-title mb-2 font-weight-bold"> {{ personaje.name }}</a>
         <div class="status">
             <div *ngIf="personaje.status === 'Dead' " class="circle bg-red"></div>
             <div *ngIf="personaje.status === 'Alive' " class="circle bg-green"></div>

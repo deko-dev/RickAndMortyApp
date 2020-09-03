@@ -25,4 +25,11 @@ export class PersonajesService {
         return this.getQuery(`page=${page}`);
     }
 
+
+    getPersonaje(idP:number){
+        const url = `https://rickandmortyapi.com/api/character/${idP}`
+
+        return this.http.get(url);
+    }
+
 }

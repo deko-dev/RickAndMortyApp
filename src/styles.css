@@ -8,6 +8,10 @@ hr {
     border: 2px solid white;
 }
 
+p {
+    margin: 0;
+}
+
 
 /* Ediciones a Boostrap */
 
@@ -115,21 +119,21 @@ hr {
     box-shadow: 0 0 15px 4px green;
 }
 
-.tarjetas .tarjeta .status {
+.status {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
 }
 
-.tarjetas .tarjeta .status .circle {
+.status .circle {
     flex: 0 1 10px;
     height: 10px;
     border-radius: 50%;
     margin-right: 10px;
 }
 
-.tarjetas .tarjeta .status .texto-status {
+.status .texto-status {
     display: inline-block;
     flex: 0 1 70%;
     margin: 0 !important;
@@ -141,6 +145,62 @@ hr {
 
 .tarjetas .tarjeta .location p {
     margin: 0;
+}
+
+
+/* PÁGINA PERSONAJE */
+
+
+/* card personaje */
+
+.card-personaje {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    background-color: #1a1a38;
+    margin: 30px auto;
+    border-radius: 15px;
+}
+
+.card-personaje .img-personaje {
+    width: 100%;
+    height: auto;
+}
+
+.card-personaje .img-personaje img {
+    width: 100%;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.card-personaje .info-personaje {
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-personaje .info-personaje .nombre-personaje {
+    color: #fff;
+    font-size: 40px;
+}
+
+.card-personaje .datos-personaje {
+    text-align: center;
+    display: flex;
+    color: #fff;
+    flex-direction: column;
+}
+
+.card-personaje .datos-personaje .status {
+    justify-content: center;
+}
+
+.card-personaje .datos-personaje .status .circle {
+    margin: 0;
+}
+
+.card-personaje .datos-personaje .status .texto-status {
+    flex: 0 1 55%;
 }
 
 
