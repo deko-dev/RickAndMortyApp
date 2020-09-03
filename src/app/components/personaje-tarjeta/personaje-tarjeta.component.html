@@ -1,1 +1,21 @@
-<p>personaje-tarjeta works!</p>
+<div class="tarjeta" *ngFor="let personaje of personajes">
+    <div class="img-tarjeta">
+        <a [routerLink]="['personaje', personaje.id]">
+            <img [src]="personaje.image" class="img-fluid" [alt]="personaje.name">
+        </a>
+    </div>
+    <div class="info-tarjeta">
+        <a [routerLink]="['personaje', personaje.id]" class="card-title mb-2 font-weight-bold"> {{ personaje.name }}</a>
+        <div class="status">
+            <div *ngIf="personaje.status === 'Dead' " class="circle bg-red"></div>
+            <div *ngIf="personaje.status === 'Alive' " class="circle bg-green"></div>
+            <div *ngIf="personaje.status === 'unknown' " class="circle bg-gray"></div>
+
+            <p class="texto-status"> {{ personaje.status }} - {{ personaje.species }}</p>
+        </div>
+        <div class="location">
+            <p class="text-muted">Ultima locación conocida</p>
+            <p> {{ personaje.location['name'] }} </p>
+        </div>
+    </div>
+</div>

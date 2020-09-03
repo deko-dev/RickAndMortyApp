@@ -7,8 +7,10 @@ import { map } from 'rxjs/operators';
 @Injectable({
     providedIn: 'root' 
 })
-export class PersonajesService {
-    
+export class PersonajesService { 
+
+    episodes: Object[] = [];
+
     constructor( private http: HttpClient ){
         console.log('Servicio Personajes Listo');
     }
@@ -22,7 +24,5 @@ export class PersonajesService {
     getPersonajes(page:number){
         return this.getQuery(`page=${page}`);
     }
-
-
 
 }

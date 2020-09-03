@@ -1,58 +1,17 @@
-
-<div class="container mt-4"> 
-  <h2 class="titulo-home">Personajes ( pag. {{ page }} - {{ info['pages'] }} ) </h2>
+<div class="container mt-4">
+    <h2 class="titulo-home">Personajes ( pag. {{ page }} - {{ info['pages'] }} ) </h2>
 </div>
 <hr>
-    <!-- <div class="row">
-        <div  *ngFor="let personaje of personajes" class="card mb-3 mr-3 bg-dark" style="max-width: 540px;">
-            <div class="row no-gutters">
-              <div class="col-md-4">
-                <img [src]="personaje.image" class="img-fluid" width="100%" [alt]="personaje.name">
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h3 class="card-title mb-0 text-light font-weight-bold"> {{ personaje.name }}</h3>
-                  <div class="card-text">
-                    <div class="status"></div><p class="card-text text-light font-weight-bold" >{{ personaje.status }} - {{ personaje.species }}</p>
-                  </div>
-                  <div class="card-text mt-2">
-                    <p class="card-text text-muted location">Ultima Locación</p>
-                    <p class="card-text text-light location">Ultima Locación</p>
-                  </div>
-                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <br>
-        <app-personaje-tarjeta></app-personaje-tarjeta>
-    </div> -->
 
-<div class="tarjetas">
-  <div class="tarjeta" *ngFor="let personaje of personajes">
-    <div class="img-tarjeta">
-      <img [src]="personaje.image" class="img-fluid" [alt]="personaje.name">
-    </div>
-    <div class="info-tarjeta">
-      <h3 class="card-title mb-2 font-weight-bold"> {{ personaje.name }}</h3>
-      <div class="status">
-        <div class="circle bg-green"></div> 
-        <p class="texto-status"> {{ personaje.status }} - {{ personaje.species }}</p>
-      </div>
-      <div class="location">
 
-      </div>
-      <div class="lanzamiento">
-
-      </div>
-    </div>
-  </div>
+<div>
+    <app-personaje-tarjeta class="tarjetas" [personajes]="personajes"></app-personaje-tarjeta>
 </div>
 
-<div class="container">  
-  <div class="botones mb-4">
-    <button  [ngStyle]="{'aria-disabled': disable }"  [ngClass]="{ 'disabled': info['prev'] === null  }" (click)="getPagina(-1)" class="btn btn-success  mr-2" >Atras</button>
-  
-    <button  [ngClass]="{ 'disabled': info['next'] === null  }" (click)="getPagina(1)" class="btn btn-success" >Siguiente</button>
-  </div>
+<div class="container">
+    <div class="botones mb-4">
+        <button [ngStyle]="{'aria-disabled': disable }" [ngClass]="{ 'disabled': info['prev'] === null  }" (click)="getPagina(-1)" class="btn btn-success  mr-2">Atras</button>
+
+        <button [ngClass]="{ 'disabled': info['next'] === null  }" (click)="getPagina(1)" class="btn btn-success">Siguiente</button>
+    </div>
 </div>

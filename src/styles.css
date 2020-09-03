@@ -1,53 +1,43 @@
 /* You can add global styles to this file, and also import other style files */
-body{
+
+body {
     background: #171729 !important;
 }
 
-hr{
+hr {
     border: 2px solid white;
 }
 
-/* Header */
-.header-principal{
-    height: 10rem;
+
+/* Ediciones a Boostrap */
+
+.navbar-light .navbar-toggler {
+    border: none;
 }
 
-
-/* .header-imagen{
-    background-image: url("src/assets/images/header.jpg");
-    background-position: center;
-    background-size: cover;
-    height: 35rem;
-} */
-
-.navbar{
-    height: 5rem;
-}
-
-.nav-link{
-    color: black !important;
-    font-size: 1.3rem;
-}
-
-.nav-link:hover{
-    color: rgb(46, 186, 221) !important;
-}
 
 /* Section */
-.section{
+
+.section {
     background-color: rgba(23, 21, 31, 0.829);
 }
 
+
 /* HOME COMPONENT */
+
+
 /* Titulo de la seccion de los Personajes */
-.titulo-home{
+
+.titulo-home {
     font-size: 25px;
     text-align: center;
     color: white;
 }
 
+
 /* Tarjetas */
-.tarjetas{
+
+.tarjetas {
     padding: 20px;
     background: #171729;
     max-width: 100%;
@@ -57,7 +47,16 @@ hr{
     align-items: center;
 }
 
-.tarjetas .tarjeta{
+@media (min-width:768px) {
+    .tarjetas {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+
+.tarjetas .tarjeta {
     border-radius: 10px;
     max-width: 75%;
     display: flex;
@@ -67,22 +66,51 @@ hr{
     background-color: #1a1a38;
 }
 
-.tarjetas .tarjeta .img-tarjeta img{
-    border-radius: 10px 10px 0px 0px;
-    height: auto;
+@media (min-width:768px) {
+    .tarjeta {
+        flex: 0 1 calc(45% - 20px);
+    }
 }
 
-.tarjetas .tarjeta .info-tarjeta{
+@media (min-width:992px) {
+    .tarjeta {
+        flex: 0 1 calc(33% - 20px);
+    }
+}
+
+@media (min-width:1140px) {
+    .tarjeta {
+        flex: 0 1 calc(20% - 20px);
+    }
+}
+
+.tarjetas .tarjeta .img-tarjeta img {
+    border-radius: 10px 10px 0px 0px;
+    height: auto;
+    width: 100%;
+}
+
+.tarjetas .tarjeta .info-tarjeta {
     padding: 15px;
 }
 
-.bg-red{
-    display: inline-block;
-    background-color: red;
-    box-shadow: 1px 2px red;
+.tarjetas .tarjeta .info-tarjeta a {
+    font-size: 25px;
+    color: #fff;
 }
 
-.bg-green{
+.bg-red {
+    background-color: red;
+    box-shadow: 0 0 15px 4px red;
+}
+
+.bg-gray {
+    background-color: gray;
+    box-shadow: 0 0 15px 4px gray;
+}
+
+.bg-green {
+    display: inline-block;
     background-color: green;
     box-shadow: 0 0 15px 4px green;
 }
@@ -90,25 +118,35 @@ hr{
 .tarjetas .tarjeta .status {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: flex-start;
 }
 
-.tarjetas .tarjeta .status .circle{
+.tarjetas .tarjeta .status .circle {
     flex: 0 1 10px;
     height: 10px;
     border-radius: 50%;
+    margin-right: 10px;
 }
 
-.tarjetas .tarjeta .status .status .texto-status{
+.tarjetas .tarjeta .status .texto-status {
     display: inline-block;
     flex: 0 1 70%;
     margin: 0 !important;
 }
 
-/* Footer */
-.footer{
-    background-color: rgb(39, 39, 39);
-    height: 10rem;
-    
+.tarjetas .tarjeta .location {
+    margin-top: 10px;
 }
 
+.tarjetas .tarjeta .location p {
+    margin: 0;
+}
+
+
+/* Footer */
+
+.footer {
+    background-color: rgb(39, 39, 39);
+    height: 10rem;
+}
